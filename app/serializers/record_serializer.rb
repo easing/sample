@@ -11,9 +11,11 @@
 #
 class RecordSerializer
   def self.call(record)
+    record = Presenter.new(record)
+
     {
       id: record.id,
-      name: record.name
+      name: record.full_name
     }
   end
 end

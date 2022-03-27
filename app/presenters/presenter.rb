@@ -9,7 +9,7 @@ class Presenter
 
   delegate_missing_to :record
 
-  def name
+  def full_name
     "#{record.name} — #{record.id}"
   end
 end

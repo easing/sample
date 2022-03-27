@@ -15,7 +15,7 @@ class RecordsController < ActionController::API
 
   def show
     record = Query.new.find(params[:id])
-    render json: RecordSerializer.call(record)
+    render json: RecordSerializer.call(Presenter.new(record))
   rescue ActiveRecord::RecordNotFound
     render :head, status: :not_found
   end
