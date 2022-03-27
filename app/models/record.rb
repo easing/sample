@@ -9,6 +9,6 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-class Record < ApplicationRecord
+class Record < ActiveRecord::Base
   validates :name, presence: true
 end
