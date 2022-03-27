@@ -6,7 +6,7 @@ class RecordsController < ActionController::API
 
   def index
     records = Query.new.index
-    fresh_when records.maximum(:updated_at)
+    fresh_when records
 
     render json: records
       .map(&Presenter.method(:new))
