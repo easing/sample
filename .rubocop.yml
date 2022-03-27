@@ -1,0 +1,20 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'bin/{rails,rake}'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+Style/AsciiComments:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
