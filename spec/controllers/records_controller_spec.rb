@@ -10,7 +10,7 @@ describe RecordsController, type: :controller do
   end
 
   describe '#create' do
-    subject! { post :create, params: }
+    subject! { post :create, params: params}
 
     context 'when params valid' do
       let(:params) { { name: SecureRandom.hex } }
